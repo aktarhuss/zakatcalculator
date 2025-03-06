@@ -60,3 +60,16 @@ button:hover {
     margin-top: 10px;
     color: #2c2c2c;
 }
+
+#your-zakat-amount {
+    font-weight: bold;
+    margin-top: 50px;
+    text-align: center;
+    color: #218838;
+}
+
+#your-zakat-amount h2 {
+    font-weight: bold;
+    text-align: center;
+    color: #218838;
+}

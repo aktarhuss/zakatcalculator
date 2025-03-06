@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakat Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Zakat Calculator</h2>
+    <div class="container">
+        <h3>Assets</h3>
+        <label for="cash">Money in Cash (₹):</label>
+        <p class="translation">নগদে টাকা</p>
+        <input type="number" id="cash" min="0">
+
+        <label for="savings">Money in Savings Account (₹):</label>
+        <p class="translation">সেভিংস অ্যাকাউন্টে টাকা</p>
+        <input type="number" id="savings" min="0">
+
+        <label for="loaned">Money Lended to a Person/Relative (If recoverable soon) (₹):</label>
+        <p class="translation">একজন ব্যক্তি/আত্মীয়কে ধার দেওয়া টাকা (যদি শীঘ্রই পুনরুদ্ধার করা যায়)</p>
+        <input type="number" id="loaned" min="0">
+
+        <label for="gold">Worth of Gold (₹) (1g = ₹8,800):</label>
+        <p class="translation">আপনার কাছে মোট সোনার মূল্য</p>
+        <input type="number" id="gold" min="0">
+
+        <label for="silver">Worth of Silver (₹) (1g = ₹98):</label>
+        <p class="translation">আপনার কাছে মোট রূপার মূল্য</p>
+        <input type="number" id="silver" min="0">
+
+        <label for="business">Current Value of Business Goods & Properties (₹):</label>
+        <p class="translation">ব্যবসায়িক পণ্য ও সম্পত্তির বর্তমান মূল্য</p>
+        <input type="number" id="business" min="0">
+
+        <label for="investments">Current Value of Investments (Shares, Mutual Fund, Bonds, SGB, ETF etc) (₹):</label>
+        <p class="translation">বিনিয়োগের বর্তমান মূল্য</p>
+        <input type="number" id="investments" min="0">
+
+        <label for="property">Current Value of land or any other properties that was purchased with an intension to sell. (₹):</label>
+        <p class="translation">জমির বর্তমান মূল্য বা অন্য কোনো সম্পত্তি যা বিক্রি করার ইচ্ছা নিয়ে কেনা হয়েছিল।</p>
+        <input type="number" id="property" min="0">
+
+        <h3>Liabilities</h3>
+        <label for="debts">Outstanding Loans/Debts (₹):</label>
+        <p class="translation">বকেয়া ঋণ/দেনা</p>
+        <input type="number" id="debts" min="0">
+
+        <div class="nisab"> Nisab Value: ₹7,69,824.00<br>(Assuming 1g Gold = ₹8,800 as of 02/03/2025) </div>
+
+        <button onclick="calculateZakat()">Calculate Zakat</button>
+        <button class="reset" onclick="resetForm()">Clear</button>
+
+        <p id="result"></p>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

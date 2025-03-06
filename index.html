@@ -11,15 +11,15 @@
     <div class="container">
         <h3>Assets</h3>
         <label for="cash">Money in Cash (₹):</label>
-        <p class="translation">নগদে টাকা</p>
+        <p class="translation">নগদ টাকা</p>
         <input type="number" id="cash" min="0">
 
         <label for="savings">Money in Savings Account (₹):</label>
         <p class="translation">সেভিংস অ্যাকাউন্টে টাকা</p>
         <input type="number" id="savings" min="0">
 
-        <label for="loaned">Money Lended to a Person/Relative (If recoverable soon) (₹):</label>
-        <p class="translation">একজন ব্যক্তি/আত্মীয়কে ধার দেওয়া টাকা (যদি শীঘ্রই পুনরুদ্ধার করা যায়)</p>
+        <label for="loaned">Money Lended to People/Relative (If recoverable soon) (₹):</label>
+        <p class="translation">ধার দেওয়া টাকা (যা শীঘ্রই পুনরুদ্ধার করা যেতে পারে)</p>
         <input type="number" id="loaned" min="0">
 
         <label for="gold">Worth of Gold (₹) (1g = ₹8,800):</label>
@@ -39,7 +39,7 @@
         <input type="number" id="investments" min="0">
 
         <label for="property">Current Value of land or any other properties that was purchased with an intension to sell. (₹):</label>
-        <p class="translation">জমির বর্তমান মূল্য বা অন্য কোনো সম্পত্তি যা বিক্রি করার ইচ্ছা নিয়ে কেনা হয়েছিল।</p>
+        <p class="translation">জমির বা অন্য কোনো সম্পত্তি বর্তমান মূল্য যা বিক্রি করার ইচ্ছা নিয়ে কেনা হয়েছিল।</p>
         <input type="number" id="property" min="0">
 
         <h3>Liabilities</h3>
@@ -47,7 +47,8 @@
         <p class="translation">বকেয়া ঋণ/দেনা</p>
         <input type="number" id="debts" min="0">
 
-        <div class="nisab"> Nisab Value: ₹7,69,824.00<br>(Assuming 1g Gold = ₹8,800 as of 02/03/2025) </div>
+        <div class="nisab"> Nisab Value: ₹7,69,824.00<br>
+        <p>(Value of 87.48g Gold. Assuming 1g Gold = ₹8,800 as of 02/03/2025)</p></div>
 
         <button onclick="calculateZakat()">Calculate Zakat</button>
         <button class="reset" onclick="resetForm()">Clear</button>

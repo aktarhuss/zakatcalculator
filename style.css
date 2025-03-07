@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -10,6 +11,7 @@ p {
 
 .container {
     max-width: 500px;
+    background: linear-gradient(315deg, #dfffe1, #ecf6ff);
     margin: auto;
     padding: 20px;
     border: 1px solid #ccc;
@@ -28,7 +30,7 @@ input {
 
 button {
     padding: 10px;
-    margin: 10px 0;
+    margin: 0px 0px 15px;
     width: 100%;
     background-color: #28a745;
     color: white;
@@ -51,29 +53,56 @@ button:hover {
 
 #result {
     font-weight: bold;
-    margin-top: 10px;
+    margin: 10px;
     text-align: center;
 }
 
 .nisab {
     text-align: center;
-    margin-top: 10px;
+    margin: 15px;
     color: #2c2c2c;
 }
 
 .nisab p{
     font-size: 12px;
+    margin-top: 5px;
+}
+
+.messege p {
+    font-size: 14px;
+    text-align: center;
 }
 
 #your-zakat-amount {
     font-weight: bold;
-    margin-top: 50px;
+    margin: 25px;
     text-align: center;
     color: #218838;
 }
 
 #your-zakat-amount h2 {
     font-weight: bold;
+    margin: 10px;
     text-align: center;
     color: #218838;
+}
+
+.loading-animation {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.spinner {
+    width: 30px;
+    height: 30px;
+    border: 4px solid #ccc;
+    border-top: 4px solid #28a745;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }

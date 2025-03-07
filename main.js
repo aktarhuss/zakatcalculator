@@ -15,14 +15,17 @@ function getValue(id) {
 }
 
 function calculateZakat() {
+    let button = document.querySelector("button[onclick='calculateZakat()']");
+    button.disabled = true; // Disable button during calculation
+
     let loadingElement = document.getElementById("loading"); 
     let resultElement = document.getElementById("result");
     let zakatElement = document.getElementById("your-zakat");
 
     // Show loading animation
     loadingElement.style.display = "block";
-    resultElement.innerHTML = ""; // Clear previous result
-    zakatElement.textContent = "-----"; // Temporary message
+    resultElement.innerHTML = "";
+    zakatElement.textContent = "-----";
 
     setTimeout(() => {
         let cash = getValue("cash");
@@ -54,10 +57,11 @@ function calculateZakat() {
             resultElement.scrollIntoView({ behavior: "smooth", block: "center" });
         }, 300);
 
-        // Hide loading animation after calculation
-        loadingElement.style.display = "none"; 
+        // Hide loading animation
+        loadingElement.style.display = "none";
+        button.disabled = false; // Re-enable button after calculation
 
-    }, 1000); // Simulate a 1-second loading effect
+    }, 1000);
 }
 
 function resetForm() {
@@ -73,3 +77,9 @@ function resetForm() {
         document.getElementById("result").innerHTML = "";
         document.getElementById("your-zakat").textContent = "-----"; // Reset the separate zakat display
 }
+
+document.querySelectorAll("input[type='number']").forEach(input => {
+    input.addEventListener("input", function() {
+        if (this.value < 0) this.value = 0;
+    });
+});

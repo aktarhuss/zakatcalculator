@@ -103,7 +103,7 @@ input {
 
 .nisab-toggle {
     display: flex;
-    border: 2px solid #28a745;
+    border: 2px solid #1869bf;
     border-radius: 8px;
     overflow: hidden;
     width: 200px;
@@ -121,7 +121,7 @@ input {
 }
 
 .nisab-toggle button.active {
-    background: #28a745;
+    background: #1869bf;
     color: white;
     font-weight: bold;
 }

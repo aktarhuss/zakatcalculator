@@ -9,6 +9,10 @@ p {
     color: #6b6b6b;
 }
 
+.heading {
+    margin: 10px;
+    color: #28a745;
+}
 .container {
     max-width: 500px;
     background: linear-gradient(315deg, #dfffe1, #ecf6ff);
@@ -28,7 +32,7 @@ input {
     border-radius: 5px;
 }
 
-button {
+.action button {
     padding: 10px;
     margin: 0px 0px 15px;
     width: 100%;
@@ -39,15 +43,15 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.action button:hover {
     background-color: #218838;
 }
 
-.reset {
+.action .reset {
     background-color: #dc3545;
 }
 
-.reset:hover {
+.action .reset:hover {
     background-color: #c82333;
 }
 
@@ -57,14 +61,11 @@ button:hover {
     text-align: center;
 }
 
-.nisab {
+.nisab-display {
     text-align: center;
     margin: 15px;
     color: #2c2c2c;
-}
-
-.nisab p{
-    font-size: 12px;
+    font-size: 15px;
     margin-top: 5px;
 }
 
@@ -76,13 +77,6 @@ button:hover {
 #your-zakat-amount {
     font-weight: bold;
     margin: 25px;
-    text-align: center;
-    color: #218838;
-}
-
-#your-zakat-amount h2 {
-    font-weight: bold;
-    margin: 10px;
     text-align: center;
     color: #218838;
 }
@@ -105,4 +99,29 @@ button:hover {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+.nisab-toggle {
+    display: flex;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 200px;
+    margin: 10px auto;
+}
+
+.nisab-toggle button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background: rgb(255, 255, 255);
+    color: rgb(143, 143, 143);
+    transition: all 0.3s;
+}
+
+.nisab-toggle button.active {
+    background: #28a745;
+    color: white;
+    font-weight: bold;
 }

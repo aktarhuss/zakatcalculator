@@ -60,7 +60,7 @@ function calculateZakat() {
             <strong>Zakat Payable (2.5%):</strong> ₹${parseFloat(zakat).toLocaleString("en-IN", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
         `;
 
-        zakatElement.textContent = `₹${zakat.toLocaleString("en-IN", { minimumFractionDigits: 2 })}`;
+        zakatElement.textContent = `₹${parseFloat(zakat).toLocaleString("en-IN", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 
         setTimeout(() => {
             resultElement.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -78,7 +78,7 @@ function resetForm() {
         formatIndianNumber(input); // Ensure correct comma formatting after reset
     });
     document.getElementById("result").innerHTML = "";
-    document.getElementById("your-zakat").textContent = "₹0.00"; // Ensure 2 decimal places on reset
+    document.getElementById("your-zakat").textContent = "₹0.00";
 }
 
 function updateNisab() {

@@ -84,7 +84,7 @@ function resetForm() {
 function updateNisab() {
     let nisabSwitch = document.getElementById("nisab-switch");
     let nisabType = nisabSwitch.checked ? "silver" : "gold";
-    let nisab = (nisabType === "gold") ? 87.5 * 8900 : 612 * 99; // Gold or Silver Nisab
+    let nisab = (nisabType === "gold") ? 87.48 * 15430 : 612.36 * 237.9; // Gold or Silver Nisab
     document.getElementById("nisabAmount").textContent = nisab.toLocaleString("en-IN", { minimumFractionDigits: 2 });
 }
 
@@ -137,4 +137,5 @@ function isNumberKey(evt) {
         evt.preventDefault(); // Prevent non-numeric characters
     }
 }
+
 

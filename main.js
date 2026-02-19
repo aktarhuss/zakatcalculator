@@ -30,7 +30,7 @@ function calculateZakat() {
 
     // Get selected Nisab type from the toggle state
     let nisabType = selectedNisab;
-    let nisab = (nisabType === "gold") ? 87.5 * 8900 : 612 * 99;
+    let nisab = (nisabType === "gold") ? 87.48 * 15430 : 612.36 * 237.9;
 
     // Show loading animation
     loadingElement.style.display = "block";
@@ -137,3 +137,4 @@ function isNumberKey(evt) {
         evt.preventDefault(); // Prevent non-numeric characters
     }
 }
+

@@ -99,7 +99,7 @@ function setNisab(type) {
     selectedNisab = type;
     
     // Update Nisab amount
-    let nisab = (selectedNisab === "gold") ? 87.5 * 8900 : 612 * 99;
+    let nisab = (selectedNisab === "gold") ? 87.48 * 15430 : 612.36 * 237.9;
     document.getElementById("nisabAmount").textContent = nisab.toLocaleString("en-IN", { minimumFractionDigits: 2 });
 
     // Toggle active class
@@ -137,5 +137,6 @@ function isNumberKey(evt) {
         evt.preventDefault(); // Prevent non-numeric characters
     }
 }
+
 
 

@@ -17,41 +17,41 @@
 
         <label for="cash">Money in Cash (₹):</label>
         <p class="translation">আপনার কাছে নগদ টাকা</p>
-        <input type="number" id="cash" oninput="formatIndianNumber(this)" onkeypress="return isNumberKey(event)" autocomplete="off">
+        <input type="text" id="cash" oninput="formatIndianNumber(this)" onkeypress="return isNumberKey(event)" autocomplete="off">
 
         <label for="savings">Money in Bank Account (₹):</label>
         <p class="translation">ব্যাংক অ্যাকাউন্টে রাখা টাকা</p>
-        <input type="number" id="savings" oninput="formatIndianNumber(this)" onkeypress="return isNumberKey(event)" autocomplete="off">
+        <input type="text" id="savings" oninput="formatIndianNumber(this)" onkeypress="return isNumberKey(event)" autocomplete="off">
 
         <label for="loaned">Money Lended to People/Relative (₹):</label>
         <p class="translation">ধার দেওয়া টাকা (যা শীঘ্রই পুনরুদ্ধার হতে পারে)</p>
-        <input type="number" id="loaned" oninput="formatIndianNumber(this)" onkeypress="return isNumberKey(event)" autocomplete="off">
+        <input type="text" id="loaned" oninput="formatIndianNumber(this)" onkeypress="return isNumberKey(event)" autocomplete="off">
 
-        <label for="gold">Worth of Gold (₹) (1g = ₹15,430):</label>
+        <label for="gold">Worth of Gold (₹) (1g = ₹15,430.00):</label>
         <p class="translation">আপনার কাছে মোট সোনার গয়নার মূল্য</p>
-        <input type="number" id="gold" oninput="formatIndianNumber(this)" onkeypress="return isNumberKey(event)" autocomplete="off">
+        <input type="text" id="gold" oninput="formatIndianNumber(this)" onkeypress="return isNumberKey(event)" autocomplete="off">
 
-        <label for="silver">Worth of Silver (₹) (1g = ₹274):</label>
+        <label for="silver">Worth of Silver (₹) (1g = ₹273.9):</label>
         <p class="translation">আপনার কাছে মোট রূপার গয়নার মূল্য</p>
-        <input type="number" id="silver" oninput="formatIndianNumber(this)" onkeypress="return isNumberKey(event)" autocomplete="off">
+        <input type="text" id="silver" oninput="formatIndianNumber(this)" onkeypress="return isNumberKey(event)" autocomplete="off">
 
         <label for="business">Current Value of Business Goods & Properties (₹):</label>
         <p class="translation">ব্যবসায়িক পণ্য ও সম্পত্তির বর্তমান মূল্য</p>
-        <input type="number" id="business" oninput="formatIndianNumber(this)" onkeypress="return isNumberKey(event)" autocomplete="off">
+        <input type="text" id="business" oninput="formatIndianNumber(this)" onkeypress="return isNumberKey(event)" autocomplete="off">
 
         <label for="investments">Current Value of Investments (Mutual Fund, Shares, Bond, SGB, ETF etc) (₹):</label>
         <p class="translation">বিনিয়োগের বর্তমান মূল্য</p>
-        <input type="number" id="investments" oninput="formatIndianNumber(this)" onkeypress="return isNumberKey(event)" autocomplete="off">
+        <input type="text" id="investments" oninput="formatIndianNumber(this)" onkeypress="return isNumberKey(event)" autocomplete="off">
 
-        <label for="property">Current Value of land or any other properties that was purchased with an intension to sell. (₹):</label>
+        <label for="property">Current Value of land/property that was purchased with an intension to sell. (₹):</label>
         <p class="translation">জমি বা অন্য কোনো সম্পত্তির বর্তমান মূল্য যা বিক্রি করার ইচ্ছা নিয়ে কেনা হয়েছিল</p>
-        <input type="number" id="property" oninput="formatIndianNumber(this)" onkeypress="return isNumberKey(event)" autocomplete="off">
+        <input type="text" id="property" oninput="formatIndianNumber(this)" onkeypress="return isNumberKey(event)" autocomplete="off">
 
         <h3>Liabilities</h3>
 
         <label for="debts">Outstanding Loans/Debts (₹):</label>
         <p class="translation">বকেয়া দেনা/করজ</p>
-        <input type="number" id="debts" oninput="formatIndianNumber(this)" onkeypress="return isNumberKey(event)" autocomplete="off">
+        <input type="text" id="debts" oninput="formatIndianNumber(this)" onkeypress="return isNumberKey(event)" autocomplete="off">
 
         <div class="nisab-toggle">
             <button id="silverBtn" class="active" onclick="setNisab('silver')">Silver</button>
@@ -86,5 +86,6 @@
     <script src="main.js"></script>
 </body>
 </html>
+
 
 

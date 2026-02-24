@@ -9,83 +9,71 @@
 <body>
     <div class="heading">
         <h2>Zakat Calculator</h2>
-        <p>Ramadan 2026</p>
+        <p>This Ramadan 2026, calculate and pay your zakat most accurately!</p>
     </div>
     
     <div class="container">
         <h3>Assets</h3>
 
-        <label for="cash">Money in Cash (₹):</label>
+        <label>Money in Cash (₹):</label>
         <p class="translation">আপনার কাছে নগদ টাকা</p>
-        <input type="text" id="cash" oninput="formatIndianNumber(this)" onkeypress="return isNumberKey(event)" autocomplete="off">
+        <input type="text" id="cash" inputmode="numeric" autocomplete="off">
 
-        <label for="savings">Money in Bank Account (₹):</label>
+        <label>Money in Bank Account (₹):</label>
         <p class="translation">ব্যাংক অ্যাকাউন্টে রাখা টাকা</p>
-        <input type="text" id="savings" oninput="formatIndianNumber(this)" onkeypress="return isNumberKey(event)" autocomplete="off">
+        <input type="text" id="savings" inputmode="numeric" autocomplete="off">
 
-        <label for="loaned">Money Lended to People/Relative (₹):</label>
+        <label>Money Lended to People/Relative (₹):</label>
         <p class="translation">ধার দেওয়া টাকা (যা শীঘ্রই পুনরুদ্ধার হতে পারে)</p>
-        <input type="text" id="loaned" oninput="formatIndianNumber(this)" onkeypress="return isNumberKey(event)" autocomplete="off">
+        <input type="text" id="loaned" inputmode="numeric" autocomplete="off">
 
-        <label for="gold">Worth of Gold (₹) (1g = ₹15,430.00):</label>
-        <p class="translation">আপনার কাছে মোট সোনার গয়নার মূল্য</p>
-        <input type="text" id="gold" oninput="formatIndianNumber(this)" onkeypress="return isNumberKey(event)" autocomplete="off">
+        <label>Worth of Gold (₹) (1g = ₹15,430.00):</label>
+        <p class="translation">আপনার কাছে মোট সোনার গয়নার মূল্য</p>
+        <input type="text" id="gold" inputmode="numeric" autocomplete="off">
 
-        <label for="silver">Worth of Silver (₹) (1g = ₹273.9):</label>
-        <p class="translation">আপনার কাছে মোট রূপার গয়নার মূল্য</p>
-        <input type="text" id="silver" oninput="formatIndianNumber(this)" onkeypress="return isNumberKey(event)" autocomplete="off">
+        <label>Worth of Silver (₹) (1g = ₹273.90):</label>
+        <p class="translation">আপনার কাছে মোট রূপার গয়নার মূল্য</p>
+        <input type="text" id="silver" inputmode="numeric" autocomplete="off">
 
-        <label for="business">Current Value of Business Goods & Properties (₹):</label>
+        <label>Current value of Business Goods & Properties (₹):</label>
         <p class="translation">ব্যবসায়িক পণ্য ও সম্পত্তির বর্তমান মূল্য</p>
-        <input type="text" id="business" oninput="formatIndianNumber(this)" onkeypress="return isNumberKey(event)" autocomplete="off">
+        <input type="text" id="business" inputmode="numeric" autocomplete="off">
 
-        <label for="investments">Current Value of Investments (Mutual Fund, Shares, Bond, SGB, ETF etc) (₹):</label>
+        <label>Current value of Investments (Mutual Fund, Shares, Bond, SGB, ETF etc) (₹):</label>
         <p class="translation">বিনিয়োগের বর্তমান মূল্য</p>
-        <input type="text" id="investments" oninput="formatIndianNumber(this)" onkeypress="return isNumberKey(event)" autocomplete="off">
+        <input type="text" id="investments" inputmode="numeric" autocomplete="off">
 
-        <label for="property">Current Value of land/property that was purchased with an intension to sell. (₹):</label>
+        <label>Current value of property/land that was purchased with an intension to sell. (₹):</label>
         <p class="translation">জমি বা অন্য কোনো সম্পত্তির বর্তমান মূল্য যা বিক্রি করার ইচ্ছা নিয়ে কেনা হয়েছিল</p>
-        <input type="text" id="property" oninput="formatIndianNumber(this)" onkeypress="return isNumberKey(event)" autocomplete="off">
+        <input type="text" id="property" inputmode="numeric" autocomplete="off">
 
         <h3>Liabilities</h3>
 
-        <label for="debts">Outstanding Loans/Debts (₹):</label>
-        <p class="translation">বকেয়া দেনা/করজ</p>
-        <input type="text" id="debts" oninput="formatIndianNumber(this)" onkeypress="return isNumberKey(event)" autocomplete="off">
+        <label>Outstanding Loans/Debts (₹):</label>
+        <p class="translation">বকেয়া করজ/দেনা</p>
+        <input type="text" id="debts" inputmode="numeric" autocomplete="off">
+        
+        <p>Select nisab standard</p>
 
         <div class="nisab-toggle">
-            <button id="silverBtn" class="active" onclick="setNisab('silver')">Silver</button>
-            <button id="goldBtn" onclick="setNisab('gold')">Gold</button>            
+            <button id="silverBtn">Silver</button>
+            <button id="goldBtn">Gold</button>
         </div>
 
-        <div class="nisab-display">
-            <p>Nisab Value: ₹<span id="nisabAmount">0</span></p>
-        </div>
+        <p style="color: red;" id="error-message" class="error"></p>
 
         <div class="action">
-        <button onclick="calculateZakat()">Calculate Zakat</button>
-        <button class="reset" onclick="resetForm()">Clear</button>
+            <button id="calculateBtn">Calculate Zakat</button>
+            <button id="resetBtn" class="reset">Clear All</button>
         </div>
 
-        <p id="result"></p>
-
-        <div id="loading" class="loading-animation" style="display: none;">
-            <div class="spinner"></div>
-            <p>Calculating...</p>
-        </div>
+        <div id="result"></div>
 
         <div id="your-zakat-amount">
             <h2>Your Zakat Amount:</h2>
-            <h2 id="your-zakat">-----</h2>
-        </div>
-
-        <div class="messege">
-            <p><i>আল্লাহ তাদেরকে নিজের অনুগ্রহে যা দান করেছেন তাতে যারা কৃপণতা করে এই কার্পন্য তাদের জন্য মঙ্গলকর হবে বলে তারা যেন ধারণা না করে। বরং এটা তাদের পক্ষে একান্তই ক্ষতিকর প্রতিপন্ন হবে। যাতে তারা কার্পন্য করে সে সমস্ত ধন-সম্পদকে কিয়ামতের দিন তাদের গলায় বেড়ী বানিয়ে পরানো হবে। আর আল্লাহ হচ্ছেন আসমান ও যমীনের পরম সত্ত্বাধিকারী। আর যা কিছু তোমরা কর; আল্লাহ সে সম্পর্কে জানেন। <br> - সূরা আলে-ইমরান : 180</i></p>
+            <h2 id="your-zakat">—</h2>
         </div>
     </div>
     <script src="main.js"></script>
 </body>
 </html>
-
-
-

@@ -7,13 +7,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="heading">
-        <h2>Zakat Calculator</h2>
-        <p>This Ramadan 2026, calculate and pay your zakat most accurately!</p>
-    </div>
+    <header>
+        <div class="heading">
+            <h1>Zakat Calculator</h1>
+            <p>1st Ramzan 2026 is considered as due date.</p>
+            <p>Calculations will follow Hanafi opinion.</p>
+        </div>
+    </header>
+
     
     <div class="container">
-        <h3>Assets</h3>
+        <h2>Assets</h2>
 
         <label>Money in Cash (₹):</label>
         <p class="translation">আপনার কাছে নগদ টাকা</p>
@@ -23,48 +27,49 @@
         <p class="translation">ব্যাংক অ্যাকাউন্টে রাখা টাকা</p>
         <input type="text" id="savings" inputmode="numeric" autocomplete="off">
 
-        <label>Money Lended to People/Relative (₹):</label>
+        <label>Money lended to People/Relative (₹):</label>
         <p class="translation">ধার দেওয়া টাকা (যা শীঘ্রই পুনরুদ্ধার হতে পারে)</p>
         <input type="text" id="loaned" inputmode="numeric" autocomplete="off">
 
-        <label>Worth of Gold (₹) (1g = ₹15,430.00):</label>
+        <label>Value of pure Gold in your jewellery (₹) (1g = ₹15,430.00):</label>
         <p class="translation">আপনার কাছে মোট সোনার গয়নার মূল্য</p>
         <input type="text" id="gold" inputmode="numeric" autocomplete="off">
 
-        <label>Worth of Silver (₹) (1g = ₹273.90):</label>
+        <label>Value of pure Silver in your jewellery (₹) (1g = ₹273.90):</label>
         <p class="translation">আপনার কাছে মোট রূপার গয়নার মূল্য</p>
         <input type="text" id="silver" inputmode="numeric" autocomplete="off">
 
-        <label>Current value of Business Goods & Properties (₹):</label>
+        <label>Value of Business Inventory (₹):</label>
         <p class="translation">ব্যবসায়িক পণ্য ও সম্পত্তির বর্তমান মূল্য</p>
         <input type="text" id="business" inputmode="numeric" autocomplete="off">
 
-        <label>Current value of Investments (Mutual Fund, Shares, Bond, SGB, ETF etc) (₹):</label>
+        <label>Value of Investments (Shares, Funds, Deopsits, Bonds, etc) (₹):</label>
         <p class="translation">বিনিয়োগের বর্তমান মূল্য</p>
         <input type="text" id="investments" inputmode="numeric" autocomplete="off">
 
-        <label>Current value of property/land that was purchased with an intension to sell. (₹):</label>
+        <label>Value of property/land that was purchased with an intension to sell. (₹):</label>
         <p class="translation">জমি বা অন্য কোনো সম্পত্তির বর্তমান মূল্য যা বিক্রি করার ইচ্ছা নিয়ে কেনা হয়েছিল</p>
         <input type="text" id="property" inputmode="numeric" autocomplete="off">
 
-        <h3>Liabilities</h3>
+        <h2>Liabilities</h2>
 
         <label>Outstanding Loans/Debts (₹):</label>
         <p class="translation">বকেয়া করজ/দেনা</p>
         <input type="text" id="debts" inputmode="numeric" autocomplete="off">
         
-        <p>Select nisab standard</p>
-
         <div class="nisab-toggle">
             <button id="silverBtn">Silver</button>
             <button id="goldBtn">Gold</button>
         </div>
 
+        <p>Please select the Nisab standard carefully. Choosing the silver standard is more beneficial for the poor, as it has a lower threshold and allows more people to qualify for paying Zakat.</p>
+        <p>অনুগ্রহ করে নিসাবের মান সতর্কতার সাথে নির্বাচন করুন। রূপার মান নির্বাচন করা দরিদ্রদের জন্য অধিক উপকারী, কারণ এর সীমা কম এবং এর ফলে আরও বেশি মানুষ যাকাত আদায়ের যোগ্য হয়ে থাকেন।</p>
+
         <p style="color: red;" id="error-message" class="error"></p>
 
         <div class="action">
             <button id="calculateBtn">Calculate Zakat</button>
-            <button id="resetBtn" class="reset">Clear All</button>
+            <button id="resetBtn" class="reset">Reset</button>
         </div>
 
         <div id="result"></div>

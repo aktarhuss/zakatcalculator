@@ -108,7 +108,10 @@ document.addEventListener("DOMContentLoaded", function () {
         // ✅ STOP LOADING
         calculateBtn.disabled = false;
         calculateBtn.textContent = originalText;
-
+        
+        document.getElementById("your-zakat-amount").scrollIntoView({
+        behavior: "smooth"
+        });
     }, 1200); // 1.2 second fake delay
 }
 

@@ -10,15 +10,14 @@ body {
     margin: 0;
 }
 
-h3 {
-    padding-block: 1rem;
-    color: #28a745;
-}
 
 p {
     color: #656565;
     font-size: 0.9rem;
+    margin-bottom: 10px;
 }
+
+
 
 label {
     font-size: 1rem;
@@ -27,6 +26,14 @@ label {
 .heading {
     padding-top: 2rem;
     color: #28a745;
+
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
 }
 
 .container {
@@ -36,6 +43,15 @@ label {
     padding: 1rem;
     border-radius: 10px;
     text-align: left;
+
+    h2 {
+        padding-block: 1rem;
+        color: #28a745;
+    }
+
+    .translation {
+        margin-bottom: 0;
+    }
 }
 
 input {
@@ -53,7 +69,7 @@ input {
     border-radius: 8px;
     overflow: hidden;
     width: 200px;
-    margin-block: 10px;
+    margin-block: 15px;
 }
 
 .nisab-toggle button {
@@ -117,4 +133,3 @@ input {
     text-align: center;
     color: #218838;
 }
-
